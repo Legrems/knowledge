@@ -106,3 +106,7 @@ Source:
  - [Postgres functions json](https://www.postgresql.org/docs/current/functions-json.html)
  - [Django Querying jsonfield](https://docs.djangoproject.com/en/5.2/topics/db/queries/#querying-jsonfield)
  - [Stack overflow: Can I use a jsonpath predicate in a filter?](https://stackoverflow.com/questions/76257375/can-i-use-a-jsonpath-predicate-in-a-filter)
+
+
+```{tags} Django, Python, PostgreSQL, SQL, JSONField, jsonb_path_exists, nested search
+```

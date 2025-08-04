@@ -18,3 +18,6 @@ QuerySet.__bases__ += (QuerySetExplainMixin,)
 ```python
 print(MyModel.objects.filter(...).explain())
 ```
+
+```{tags} Django, Python, PostgreSQL, Explain, SQL, QuerySet, Debugging
+```
