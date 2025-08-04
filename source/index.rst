@@ -11,10 +11,4 @@ It is intended to be a quick reference guide for myself and others who may find 
 
    notes/django/postgres_jsonfield_nested_search
    notes/django/explain_qs
-
-.. toctree::
-   :maxdepth: 2
-   :numbered:
-   :caption: Tags
-
-   _tags/tagsindex
+   notes/django/export_related_model

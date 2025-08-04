@@ -19,5 +19,8 @@ QuerySet.__bases__ += (QuerySetExplainMixin,)
 print(MyModel.objects.filter(...).explain())
 ```
 
+Source:
+ - [Stack overflow: Easy way to run "explain" on query sets in django](https://stackoverflow.com/questions/11476664/easy-way-to-run-explain-on-query-sets-in-django)
+
 ```{tags} Django, Python, PostgreSQL, Explain, SQL, QuerySet, Debugging
 ```

@@ -11,7 +11,7 @@ class MyModel(models.Model):
 mymodel.data = [{"settings": {"test": "value", ...}}, {...}, ...]
 ```
 
-We cannot do: `MyModel.objects.filter(data__0__settings__has_keys=['test'])` only work for the first item.
+We can do: `MyModel.objects.filter(data__0__settings__has_keys=['test'])`, but this only work for the first item.
 
 
 But we can use the `extra` method with a raw SQL query to achieve this.
