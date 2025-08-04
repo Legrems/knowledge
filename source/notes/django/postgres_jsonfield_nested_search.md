@@ -1,4 +1,4 @@
-# Existance of key inside a nested json field in Django with PostgreSQL
+# Existence of key inside a nested json field in Django with PostgreSQL
 
 When working with PostgreSQL and Django, you might need to check for the existence of a key inside a nested JSON field.
 If the field is a list of dictionaries, you can't really use the `has_keys` method directly on the queryset, as it only works for a specific item in the list.
@@ -49,6 +49,7 @@ MyModel.objects.filter(JSONBPathExists("data", V('$.** ? (exists(@.settings.test
 
 As it's a bit verbose and not very readable, we can create custom functions to make it more convenient.
 
+## Nested key value filtering
 ```python
 from django.db.models import Func, BooleanField
 from django.db.models import Value as V
@@ -67,12 +68,14 @@ class JBV(Func):
         v = V(f'$.** ? (@.{key} == "{value}")')
 
         super().__init__(field, v)
+```
 
-# Usage
+### Example usage
+```python
 MyModel.objects.filter(JBV('data', 'settings.test', 'value'))
 ```
 
-## Key existance check
+## Nested key existence check
 ```python
 from django.db.models import Func, BooleanField
 from django.db.models import Value as V
@@ -90,9 +93,11 @@ class JBE(Func):
         v = V(f'$.** ? (exists(@.{key}))')
 
         super().__init__(field, v)
+```
 
 
-# Usage
+### Example usage
+```python
 MyModel.objects.filter(JBE('data', 'settings.test'))
 ```
 
