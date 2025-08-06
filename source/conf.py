@@ -17,8 +17,8 @@
 
 # -- Project information -----------------------------------------------------
 
-project = "Knowledge base for Django, Python"
-copyright = "2025, Loïc Gremaud"  # noqa: A001
+project = "Knowledge base"
+copyright = "2025, Legrems"  # noqa: A001
 author = "Loïc Gremaud loic.gremaud@arcanite.ch"
 
 
