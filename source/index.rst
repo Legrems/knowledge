@@ -13,3 +13,4 @@ It could also include snippets of code, explanations of concepts, and links to e
    notes/django/postgres_jsonfield_nested_search
    notes/django/explain_qs
    notes/django/export_related_model
+   notes/django/move_model_from_app_to_app
