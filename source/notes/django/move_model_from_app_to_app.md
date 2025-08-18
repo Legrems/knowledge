@@ -115,3 +115,6 @@ Now:
  - The db_table has been updated, and all the relation also
  - The default DB table from django is used
  - No data is lost. 🎉
+
+```{tags} Django, Python, Model, App, Move, Data, db_table
+```
